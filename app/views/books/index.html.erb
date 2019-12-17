@@ -5,7 +5,8 @@
       <h2>Page count:<%= book.pages %> </h2>
       <h2>Publication year: <%= book.publication_year %> </h2>
         <% book.authors.each do |author| %>
-          <p>Author name: <%= author.name %></p>
+          <p>Author name: <%= link_to "#{author.name}", "/authors/#{author.id}" %></p>
+
           <% end %>
     </section>
 <% end  %>
